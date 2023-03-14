@@ -195,7 +195,7 @@ img {
 
 .hero {
   display: block;
-  /* background-color: var(--hero-bg); */
+  background-color: var(--hero-bg);
   background-position: center;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -204,6 +204,7 @@ img {
     url("../images/hero-banner.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-size: cover;
   padding: 188px 0;
 }
 
@@ -558,6 +559,11 @@ img {
   color: #fff;
 }
 
+.footer-column3 p {
+  margin-bottom: 16px;
+  margin-left: 80px;
+}
+
 .footer-columns .social-item {
   background: rgba(255, 255, 255, 0.1);
   padding: 8px;
@@ -686,6 +692,7 @@ img {
   margin-bottom: 8px;
   padding-left: 38px;
   color: var(--text);
+  transition: border 250ms var(--timing-cubic);
 }
 
 .form-field {
@@ -701,9 +708,7 @@ img {
   padding: 8px 16px;
 }
 
-.form-field:hover,
 .form-field:focus,
-.form-area:hover,
 .form-area:focus {
   border: 1px solid var(--primary);
   outline: 1px solid var(--primary);
@@ -714,6 +719,38 @@ img {
   line-height: 14px;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex;
+  align-items: center;
+}
+
+.form-checkbox a {
+  color: var(--primary);
+}
+
+.agree-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid var(--hero-bg);
+  border-radius: 2px;
+  margin-right: 8px;
+  fill: none;
+  transition: background-color 250ms var(--timing-cubic),
+    border 250ms var(--timing-cubic), fill 250ms var(--timing-cubic);
+}
+
+.agree-checkbox:checked + .checkbox-icon {
+  background: var(--pressed);
+  border: 1px solid var(--pressed);
+  fill: var(--light);
 }
 
 .form-button {
@@ -727,16 +764,17 @@ img {
   fill: var(--hero-bg);
   width: 18px;
   height: 18px;
+  transition: fill 250ms var(--timing-cubic);
 }
 
-.input-field:hover .form-icon,
-.input-field:focus .form-icon {
+.form-field:focus ~ .form-icon {
   fill: var(--primary);
 }
 
 .subscription-form {
   margin-left: 80px;
   position: relative;
+  display: flex;
 }
 
 .subscription-form input {
@@ -747,7 +785,6 @@ img {
   border-radius: 4px;
   background-color: var(--hero-bg);
   color: #fff;
-  margin-top: 16px;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
@@ -772,6 +809,7 @@ img {
   text-align: left;
   min-width: 165px;
   transition: background-color 250ms var(--timing-cubic);
+  margin-left: var(--horizontal-gap);
 }
 
 .subscribe-button:hover,
@@ -786,6 +824,6 @@ img {
   height: 24px;
   display: block;
   position: absolute;
-  top: 50px;
+  bottom: 8px;
   right: 24px;
 }
