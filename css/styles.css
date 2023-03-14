@@ -553,6 +553,11 @@ img {
   margin-left: var(--large-v-gap);
 }
 
+.footer-column2 p,
+.footer-column3 p {
+  color: #fff;
+}
+
 .footer-columns .social-item {
   background: rgba(255, 255, 255, 0.1);
   padding: 8px;
@@ -731,4 +736,56 @@ img {
 
 .subscription-form {
   margin-left: 80px;
+  position: relative;
+}
+
+.subscription-form input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--hero-bg);
+  color: #fff;
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+}
+
+.subscription-form input::placeholder {
+  color: #fff;
+}
+
+.subscribe-button {
+  padding: 8px 24px;
+  background-color: var(--primary);
+  border-radius: 4px;
+  border: var(--primary);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  text-align: left;
+  min-width: 165px;
+  transition: background-color 250ms var(--timing-cubic);
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--pressed);
+}
+
+.subscribe-button::after {
+  background-image: url(../images/subscription.svg);
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 24px;
 }
