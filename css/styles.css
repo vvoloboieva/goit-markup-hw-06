@@ -559,9 +559,12 @@ img {
   color: #fff;
 }
 
+.footer-column3 {
+  margin-left: auto;
+}
+
 .footer-column3 p {
   margin-bottom: 16px;
-  margin-left: 80px;
 }
 
 .footer-columns .social-item {
@@ -772,7 +775,6 @@ img {
 }
 
 .subscription-form {
-  margin-left: 80px;
   position: relative;
   display: flex;
 }
